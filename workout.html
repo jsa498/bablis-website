@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAbKAeEPFpu8juZpXMmyEohPe168nITIoc",
+        authDomain: "bablis-4aba9.firebaseapp.com",
+        projectId: "bablis-4aba9",
+        storageBucket: "bablis-4aba9.appspot.com",
+        messagingSenderId: "288623617774",
+        appId: "1:288623617774:web:b5bcb04e5c9d5e5f22f5ff",
+        measurementId: "G-KG9GNTZKZX"
+      };
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore(app);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workout Tracker</h1>
+            <div id="user-selector">
+                <button id="mottu" class="user-button active">Mottu</button>
+                <button id="babli" class="user-button">Babli</button>
+            </div>
+        </header>
+        <div id="day-selector">
+            <label for="day">Select a day:</label>
+            <select id="day">
+                <option value="Monday">Monday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+        </div>
+        <div id="workout-log"></div>
+    </div>
+    <script src="workout.js"></script>
+</body>
+</html>
