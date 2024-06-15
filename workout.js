@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Saturday: [
             'Glute Extensions',
             'Hip Thrusts',
-            'Calf Raises'
+            'Calf Raises',
+            'Sumo Squats'
         ]
     };
 
